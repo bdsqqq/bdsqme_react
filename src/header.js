@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled'
-import { jsx, css } from '@emotion/core'
 
 
 function Header(){
@@ -36,7 +35,7 @@ function Header(){
         font-family: 'Abel';
 
         &:hover {
-        color: white;
+            color: white;
         }
         
     `

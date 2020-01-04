@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled'
-import { jsx, css } from '@emotion/core'
 
 
 function Nav(){
 
-    const breakpoints = [576, 768, 992, 1200]
+    const breakpoints = [576, 704, 992, 1200]
 
     const mq = breakpoints.map(
         bp => `@media (min-width: ${bp}px)`
@@ -36,6 +35,8 @@ function Nav(){
 
         &:hover {
         color: white;
+
+        cursor: pointer;
         }
 
         ${mq[1]}{
@@ -44,11 +45,21 @@ function Nav(){
     `
 
     const NavItem = styled.span`
-        padding: -10px -10px;
-        font-size: 16px;
+        font-size: 11px;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1em;
+
+        cursor: pointer;
 
         ${mq[1]}{
-            padding: 34px 10px;
+            padding: 10px 10px;
+            margin-top: 28px;
+
+            font-size: 16px;
         }
     `
 
@@ -58,11 +69,11 @@ function Nav(){
 
     return (
         <Header>
-            <NavItem>Fale<Space>_</Space>Comigo</NavItem>
+            <NavItem>Sobre<Space>_</Space>mim</NavItem>
             <NavItem>Fale<Space>_</Space>Comigo</NavItem>
             <Logo>IGORBEDESQUI.COM</Logo>
-            <NavItem>Fale<Space>_</Space>Comigo</NavItem>
-            <NavItem>Fale<Space>_</Space>Comigo</NavItem>
+            <NavItem>Projetos</NavItem>
+            <NavItem>Coisas</NavItem>
         </Header>
     )
 }
