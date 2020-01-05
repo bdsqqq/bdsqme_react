@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 
 function Nav(){
 
-    const breakpoints = [576, 704, 992, 1200]
+    const breakpoints = [576, 663, 992, 1200]
 
     const mq = breakpoints.map(
         bp => `@media (min-width: ${bp}px)`
@@ -70,7 +70,7 @@ function Nav(){
     return (
         <Header>
             <NavItem>Sobre<Space>_</Space>mim</NavItem>
-            <NavItem>Fale<Space>_</Space>Comigo</NavItem>
+            <NavItem>Contato</NavItem>
             <Logo>IGORBEDESQUI.COM</Logo>
             <NavItem>Projetos</NavItem>
             <NavItem>Coisas</NavItem>
