@@ -1,10 +1,6 @@
-// this comment tells babel to convert jsx to calls to a function called jsx instead of React.createElement
-/** @jsx jsx */
 import React from 'react';
 import styled from '@emotion/styled'
-import { css, jsx } from '@emotion/core'
-import { faLinkedinIn, faGithub  } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Icons from './icons'
 
 function Footer(){
 
@@ -16,21 +12,6 @@ function Footer(){
         text-align: center;
     `
     
-    const IconClass = css`
-        transition-delay: 0s;
-        transition-duration: 0.3s;
-        transition-property: opacity;
-
-        padding: 10px;
-
-        text-decoration: none;
-        color: #909090;
-        &:hover{
-            opacity: 0.7;
-            cursor: pointer;
-        }
-    `
-
     const FooterNav = styled.div`
         width: 75%;
         margin: auto;
@@ -52,16 +33,7 @@ function Footer(){
 
     return(
         <FooterWrapper>
-            <FontAwesomeIcon 
-                css={css`
-                    ${IconClass}
-                `}
-                icon={faLinkedinIn} size="2x" />
-            <FontAwesomeIcon 
-                css={css`
-                    ${IconClass}
-                `}
-                icon={faGithub} size="2x"/>
+            <Icons />
                 <div>
                 <span>IGOR BEDESQUI | 2020</span>
                 </div>
