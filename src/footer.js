@@ -15,7 +15,7 @@ function Footer(){
         width: 100%;
         text-align: center;
     `
-
+    
     const IconClass = css`
         transition-delay: 0s;
         transition-duration: 0.3s;
