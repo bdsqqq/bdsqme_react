@@ -1,14 +1,15 @@
 import React from 'react';
-import Nav from './navbar';
-import Footer from './footer'
+import Landing from './landing'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App(){
 
   return(
-    <div>
-      <Nav />
-      <Footer />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Landing} />
+      </Switch>
+    </Router>
   );
 }
 
