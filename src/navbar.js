@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
 
 
-function Nav(){
+function Nav(props){
 
-    const breakpoints = [576, 663, 992, 1200]
+    const breakpoints = [440, 576, 663, 992, 1200]
 
     const mq = breakpoints.map(
         bp => `@media (min-width: ${bp}px)`
@@ -18,7 +19,7 @@ function Nav(){
         display: flex;
         flex-flow: row wrap-reverse;
 
-        ${mq[1]}{
+        ${mq[2]}{
             flex-flow: row nowrap;
         }
     `
@@ -31,31 +32,40 @@ function Nav(){
         font-weight: 500;
         font-family: 'Abel';
         width: auto;
+        transition-delay: 0s;
+        transition-duration: 0.3s;
+        transition-property: opacity;
         order: 20;
 
         &:hover {
-        color: white;
+        opacity: 0.8;
 
         cursor: pointer;
         }
 
-        ${mq[1]}{
+        ${mq[2]}{
             order: 0;
         }
     `
 
     const NavItem = styled.span`
-        font-size: 11px;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 2px;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 1em;
+        display: none;
 
-        cursor: pointer;
+        ${mq[0]}{
+            display: block;
+            font-size: 11px;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1em;
 
-        ${mq[1]}{
+            cursor: pointer;
+        }
+
+        ${mq[2]}{
+            display: block;
             padding: 10px 10px;
             margin-top: 28px;
 
@@ -67,15 +77,24 @@ function Nav(){
         color: rgba(255,255,255,0)
     `
 
+    const isOnlyHeader = props.isOnlyHeader;
+
+    if (isOnlyHeader) {
+        return(
+            <Header>
+                <Logo>IGORBEDESQUI.COM</Logo>
+            </Header>
+        );
+    }
     return (
         <Header>
-            <NavItem>Sobre<Space>_</Space>mim</NavItem>
-            <NavItem>Contato</NavItem>
-            <Logo>IGORBEDESQUI.COM</Logo>
-            <NavItem>Projetos</NavItem>
-            <NavItem>Coisas</NavItem>
+            <NavItem><Link>Sobre<Space>_</Space>mim</Link></NavItem>
+            <NavItem><Link>Contato</Link></NavItem>
+            <Logo><Link>IGORBEDESQUI.COM</Link></Logo>
+            <NavItem><Link>Projetos</Link></NavItem>
+            <NavItem><Link>Coisas</Link></NavItem>
         </Header>
-    )
+    );
 }
 
 export default Nav
