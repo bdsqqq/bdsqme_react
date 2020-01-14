@@ -10,6 +10,7 @@ function Footer(){
         bottom: 15px;
         width: 100%;
         text-align: center;
+        color: #f1f1f1;
     `
     
     const FooterNav = styled.div`
@@ -33,7 +34,6 @@ function Footer(){
 
     return(
         <FooterWrapper>
-            <Icons />
                 <div>
                 <span>IGOR BEDESQUI | 2020</span>
                 </div>

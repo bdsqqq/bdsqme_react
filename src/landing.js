@@ -56,7 +56,8 @@ function Landing(){
         }
     `
 
-    const Button = styled.span`
+
+    const ButtonLink = styled(Link)`
         cursor: pointer;
 
         transition-duration: 0.3s;
@@ -89,8 +90,10 @@ function Landing(){
             background-color: #fff;
         }
     `
+
+
     const [i, setI] = useState(0);
-    const [delay, setDelay] = useState(2000);
+    const [delay, setDelay] = useState(3000);
 
     const adjList = ["Incrível.", "Único.", "Novo.", "Original.", "Extraordinário."];
     const adjLength = adjList.length
@@ -101,7 +104,6 @@ function Landing(){
             return 0;
         }
     }
-
 
     const muda = () => setI(zeroTo(i, adjLength-1));
 
@@ -119,8 +121,8 @@ function Landing(){
                     <HeaderChange> {adjList[i]} </HeaderChange>
                 </HeaderText>
                 <ButtonWrapper>
-                    <Button>Fale comigo!</Button>
-                    <Button>Veja meus projetos...</Button>
+                    <ButtonLink to={'/contato'}>Fale comigo!</ButtonLink>
+                    <ButtonLink>Veja meus projetos...</ButtonLink>
                 </ButtonWrapper>
             </div>
             <Icons />

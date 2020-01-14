@@ -25,7 +25,7 @@ function Nav(props){
         }
     `
 
-    const Logo = styled.span`
+    const Logo = styled(Link)`
         padding: 15px;
         margin: 15px;
         font-size: 24px;
@@ -49,7 +49,7 @@ function Nav(props){
         }
     `
 
-    const NavItem = styled.span`
+    const NavItem = styled(Link)`
         display: none;
 
         ${mq[0]}{
@@ -63,6 +63,12 @@ function Nav(props){
             line-height: 1em;
 
             cursor: pointer;
+            text-decoration: none;
+            color: white;
+
+            &:focus, &:hover, &:visited, &:link, &:active {
+                text-decoration: none;
+            }
         }
 
         ${mq[2]}{
@@ -92,17 +98,19 @@ function Nav(props){
     if (isOnlyHeader) {
         return(
             <Header>
+                <NavItem></NavItem>
                 <Logo>IGORBEDESQUI.COM</Logo>
+                <NavItem></NavItem>
             </Header>
         );
     }
     return (
         <Header>
-            <StyledLink><NavItem>Sobre<Space>_</Space>mim</NavItem></StyledLink>
-            <NavItem><StyledLink>Contato</StyledLink></NavItem>
-            <Logo><StyledLink to={'/'} style={{color: 'rgb(231, 208, 186)'}} >IGORBEDESQUI.COM</StyledLink></Logo>
-            <NavItem><StyledLink>Projetos</StyledLink></NavItem>
-            <NavItem><StyledLink>Coisas</StyledLink></NavItem>
+            <NavItem>Sobre<Space>_</Space>mim</NavItem>
+            <NavItem to={'/contato'}>Contato</NavItem>
+            <Logo to={'/'} style={{color: 'rgb(231, 208, 186)'}}>IGORBEDESQUI.COM</Logo>
+            <NavItem>Projetos</NavItem>
+            <NavItem>Coisas</NavItem>
         </Header>
     );
 }
