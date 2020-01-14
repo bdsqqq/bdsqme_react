@@ -21,8 +21,16 @@ function icons(){
         }
     `
 
+    const FooterWrapper = css`
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        width: 100%;
+        text-align: center;
+    `
+
     return(
-        <div>
+        <div css={css`${FooterWrapper}`}>
             <FontAwesomeIcon 
                 css={css`
                     ${IconClass}

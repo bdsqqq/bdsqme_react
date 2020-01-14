@@ -1,5 +1,6 @@
 import React from 'react';
 import Landing from './landing'
+import Contato from './contato'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App(){
@@ -8,6 +9,7 @@ function App(){
     <Router>
       <Switch>
         <Route path="/" exact component={Landing} />
+        <Route path="/contato" component={Contato} />
       </Switch>
     </Router>
   );

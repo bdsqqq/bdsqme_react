@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled'
 import { Link } from 'react-router-dom'
+import { css, jsx } from '@emotion/core'
 
 
 function Nav(props){
@@ -73,6 +74,15 @@ function Nav(props){
         }
     `
 
+    const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: white;
+
+        &:focus, &:hover, &:visited, &:link, &:active {
+            text-decoration: none;
+        }
+    `;
+
     const Space = styled.span`
         color: rgba(255,255,255,0)
     `
@@ -88,11 +98,11 @@ function Nav(props){
     }
     return (
         <Header>
-            <NavItem><Link>Sobre<Space>_</Space>mim</Link></NavItem>
-            <NavItem><Link>Contato</Link></NavItem>
-            <Logo><Link>IGORBEDESQUI.COM</Link></Logo>
-            <NavItem><Link>Projetos</Link></NavItem>
-            <NavItem><Link>Coisas</Link></NavItem>
+            <StyledLink><NavItem>Sobre<Space>_</Space>mim</NavItem></StyledLink>
+            <NavItem><StyledLink>Contato</StyledLink></NavItem>
+            <Logo><StyledLink to={'/'} style={{color: 'rgb(231, 208, 186)'}} >IGORBEDESQUI.COM</StyledLink></Logo>
+            <NavItem><StyledLink>Projetos</StyledLink></NavItem>
+            <NavItem><StyledLink>Coisas</StyledLink></NavItem>
         </Header>
     );
 }
