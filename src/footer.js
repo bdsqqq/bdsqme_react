@@ -4,6 +4,12 @@ import Icons from './icons'
 
 function Footer(){
 
+    const breakpoints = [576, 768, 992, 1200]
+
+    const mq = breakpoints.map(
+        bp => `@media (min-width: ${bp}px)`
+    )
+
     const FooterWrapper = styled.div`
         position: absolute;
         left: 0;
@@ -21,10 +27,10 @@ function Footer(){
     `
 
     const NavItem = styled.span`
-        font-size: 14px;
+        font-size: 11px;
         text-transform: uppercase;
         text-decoration: none;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         font-weight: 400;
         font-style: normal;
         line-height: 1em;
@@ -34,14 +40,13 @@ function Footer(){
 
     return(
         <FooterWrapper>
-                <div>
-                <span>IGOR BEDESQUI | 2020</span>
-                </div>
             <FooterNav>
                 <NavItem>Contato</NavItem>
                 <NavItem>TCC</NavItem>
             </FooterNav>
-            
+            <div>
+                <span>IGOR BEDESQUI | 2020</span>
+            </div>  
         </FooterWrapper>
     );
 }

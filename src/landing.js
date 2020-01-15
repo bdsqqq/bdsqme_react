@@ -93,7 +93,7 @@ function Landing(){
 
 
     const [i, setI] = useState(0);
-    const [delay, setDelay] = useState(3000);
+    const [delay, setDelay] = useState(2000);
 
     const adjList = ["Incrível.", "Único.", "Novo.", "Original.", "Extraordinário."];
     const adjLength = adjList.length
