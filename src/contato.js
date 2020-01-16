@@ -8,7 +8,7 @@ function Contato(){
     return(
         <>
             <Nav isOnlyHeader={false} />
-            <HeroText title='Contato' text='Before shows, I like to take pictures. It helps me relax and also I get to slink around the theater in a scarf scoffing at working class people.' />
+            <HeroText title='Contato' text='Para contato profissional, por favor, mande um email para igorbedesqui@gmail.com' />
             <Footer/>
         </>
     )
