@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef  } from 'react'
 import { Link } from 'react-router-dom'
+import HeroImage from './heroImage';
 import Nav from './navbar';
 import Icons from './icons'
 
@@ -93,7 +94,7 @@ function Landing(){
 
 
     const [i, setI] = useState(0);
-    const [delay, setDelay] = useState(2000);
+    const [delay, setDelay] = useState(3000);
 
     const adjList = ["Incrível.", "Único.", "Novo.", "Original.", "Extraordinário."];
     const adjLength = adjList.length
@@ -114,6 +115,7 @@ function Landing(){
 
     return(
         <>
+            <HeroImage size={100} photoURL={'https://images.unsplash.com/photo-1428452932365-4e7e1c4b0987?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'} />
             <Nav isOnlyHeader={true} />
             <div>
                 <HeaderText>
