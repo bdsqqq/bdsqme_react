@@ -15,8 +15,9 @@ function Footer(){
         left: 0;
         bottom: 15px;
         width: 100%;
+        color: rgba(255,255,255,.3);
+        font-size: 13px;
         text-align: center;
-        color: #f1f1f1;
     `
     
     const FooterNav = styled.div`
@@ -40,12 +41,8 @@ function Footer(){
 
     return(
         <FooterWrapper>
-            <FooterNav>
-                <NavItem>Contato</NavItem>
-                <NavItem>TCC</NavItem>
-            </FooterNav>
             <div>
-                <span>IGOR BEDESQUI | 2020</span>
+                <span>Igor Bedesqui - Desenvolvedor Web | igorbedesqui@gmail.com | 11 96132-1158</span>
             </div>  
         </FooterWrapper>
     );
