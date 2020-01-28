@@ -14,7 +14,7 @@ function icons(){
         padding: 10px;
 
         text-decoration: none;
-        color: #909090;
+        color: #f3f3f3;
         &:hover{
             opacity: 0.7;
             cursor: pointer;
